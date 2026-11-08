@@ -1,16 +1,17 @@
 :root {
   color-scheme: light;
-  --marino: #0a2f7a;
-  --marino-hondo: #041642;
-  --marino-suave: #1457c4;
-  --papel: #f3f7fe;
+  /* Azules tomados del logo redondo */
+  --marino: #1c304c;
+  --marino-hondo: #14243c;
+  --marino-suave: #2c4568;
+  --papel: #f4f6f9;
   --blanco: #ffffff;
-  --tinta: #0e1b3a;
-  --tinta-suave: #4a5a78;
-  --regla: #d5e0f0;
-  --regla-azul: #d9e6f8;
-  --acento: #1565d8;
-  --celeste: #9ccbff;
+  --tinta: #14243c;
+  --tinta-suave: #4d5a6e;
+  --regla: #dbe1ea;
+  --regla-azul: #dfe5ee;
+  --acento: #2c4568;
+  --celeste: #cdd7e6;
   --whatsapp: #25d366;
 
   --serif: "Spectral", Georgia, "Times New Roman", serif;
@@ -64,7 +65,7 @@ h3 { font-size: 1.125rem; font-weight: 600; line-height: 1.3; }
 .boton--linea { border-color: var(--marino); color: var(--marino); }
 .boton--linea:hover { background: var(--marino); color: #fff; }
 .boton--menta { background: var(--celeste); color: var(--marino-hondo); }
-.boton--menta:hover { background: #c2deff; }
+.boton--menta:hover { background: #e3e9f2; }
 
 /* Cabecera */
 .cabecera {
@@ -98,11 +99,11 @@ h3 { font-size: 1.125rem; font-weight: 600; line-height: 1.3; }
 .portada {
   position: relative; overflow: hidden;
   padding: clamp(56px, 8vw, 112px) 0 clamp(64px, 9vw, 128px);
-  background: linear-gradient(180deg, #1b74e6 0%, #0e50bd 34%, #07297a 70%, #041642 100%);
+  background: linear-gradient(180deg, #243a59 0%, #1c304c 45%, #14243c 100%);
 }
 /* Destellos verticales de luz, que se apagan hacia abajo */
 .portada::before {
-  content: ""; position: absolute; inset: 0; pointer-events: none;
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .4;
   background: linear-gradient(90deg,
     rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 4%, rgba(255,255,255,0) 9%,
     rgba(255,255,255,.1) 15%, rgba(255,255,255,0) 21%, rgba(255,255,255,.24) 28%,
@@ -115,14 +116,15 @@ h3 { font-size: 1.125rem; font-weight: 600; line-height: 1.3; }
 }
 .portada__fila { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(40px, 6vw, 88px); align-items: center; }
 .portada h1 { color: #fff; }
-.portada h1 em { font-style: normal; color: #b4d7ff; }
-.portada .antetitulo { color: #d5e8ff; }
+.portada h1 em { font-style: normal; color: #cdd7e6; }
+.portada .antetitulo { color: #dbe2ec; }
+.portada__logo { width: 153px; height: auto; margin-bottom: 24px; border-radius: 6px; }
 .portada :focus-visible { outline-color: #fff; }
-.entrada { margin-top: 24px; max-width: 34em; font-size: 1.2rem; color: #dbe9ff; }
+.entrada { margin-top: 24px; max-width: 34em; font-size: 1.2rem; color: #e1e7f0; }
 .acciones { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
 .portada .boton--whatsapp { background: #fff; color: var(--marino-hondo); }
 .portada .boton--whatsapp svg { color: #128c4b; }
-.portada .boton--whatsapp:hover { background: #e4eefc; }
+.portada .boton--whatsapp:hover { background: #e9edf3; }
 .portada .boton--linea { background: rgba(255,255,255,.12); border-color: transparent; color: #fff; }
 .portada .boton--linea:hover { background: rgba(255,255,255,.24); color: #fff; }
 
@@ -173,7 +175,7 @@ h3 { font-size: 1.125rem; font-weight: 600; line-height: 1.3; }
 .partida h3 { font: 500 1.6rem/1.2 var(--serif); color: var(--marino); }
 .partida p { color: var(--tinta-suave); }
 .etiquetas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-.etiquetas li { padding: 3px 10px; font-size: .86rem; color: var(--marino); background: #e4eefc; border-radius: 2px; }
+.etiquetas li { padding: 3px 10px; font-size: .86rem; color: var(--marino); background: #e9edf3; border-radius: 2px; }
 
 /* Equipo */
 .equipo { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(40px, 6vw, 88px); align-items: start; }
@@ -183,6 +185,7 @@ h3 { font-size: 1.125rem; font-weight: 600; line-height: 1.3; }
   flex: none; display: grid; place-items: center; width: 64px; height: 64px;
   background: var(--marino); color: #fff; font: 500 1.35rem/1 var(--serif); border-radius: 50%;
 }
+.persona__logo { flex: none; width: 128px; height: 128px; }
 .persona h3 { font: 500 1.35rem/1.25 var(--serif); color: var(--marino); }
 .persona__cargo { font-size: .95rem; font-weight: 600; color: var(--marino-suave); }
 .persona p:last-child { color: var(--tinta-suave); }
@@ -199,16 +202,16 @@ h3 { font-size: 1.125rem; font-weight: 600; line-height: 1.3; }
 .apps__fila { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 88px); align-items: center; }
 .apps__entrada { margin: 22px 0 32px; font-size: 1.15rem; }
 
-.demo { background: var(--marino); border: 1px solid #2a58ad; font-family: var(--mono); min-width: 0; }
-.demo__barra { display: flex; justify-content: space-between; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #2a58ad; font-size: .82rem; color: #fff; }
+.demo { background: var(--marino); border: 1px solid #3a5273; font-family: var(--mono); min-width: 0; }
+.demo__barra { display: flex; justify-content: space-between; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #3a5273; font-size: .82rem; color: #fff; }
 .demo__estado { color: var(--celeste); }
 .demo table { width: 100%; border-collapse: collapse; font-size: .84rem; }
-.demo th { padding: 10px 16px; text-align: left; font-weight: 400; color: #adc8ee; }
-.demo td { padding: 11px 16px; border-top: 1px solid #1f4894; color: #fff; }
+.demo th { padding: 10px 16px; text-align: left; font-weight: 400; color: #b3bfd0; }
+.demo td { padding: 11px 16px; border-top: 1px solid #2f4664; color: #fff; }
 .demo .num { text-align: right; font-variant-numeric: tabular-nums; }
 .sello { color: var(--celeste); }
 .sello--revisar { color: #ffc27a; }
-.demo figcaption { padding: 10px 16px; border-top: 1px solid #2a58ad; font-size: .74rem; color: #adc8ee; }
+.demo figcaption { padding: 10px 16px; border-top: 1px solid #3a5273; font-size: .74rem; color: #b3bfd0; }
 .js .demo tbody tr { animation: aparecer .5s ease both; animation-delay: calc(var(--i, 0) * .35s + .3s); }
 .demo tbody tr:nth-child(2) { --i: 1; }
 .demo tbody tr:nth-child(3) { --i: 2; }
@@ -217,11 +220,11 @@ h3 { font-size: 1.125rem; font-weight: 600; line-height: 1.3; }
 
 .ofertas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; margin-top: 72px; }
 .ofertas li { padding-top: 18px; border-top: 2px solid var(--celeste); }
-.ofertas p { margin-top: 6px; font-size: .98rem; color: #bcd2f0; }
+.ofertas p { margin-top: 6px; font-size: .98rem; color: #c0cbdb; }
 
 .producto {
   display: grid; grid-template-columns: .6fr 1.4fr; gap: 24px 48px; align-items: center;
-  margin-top: 64px; padding: 32px; border: 1px solid #2a58ad; background: var(--marino);
+  margin-top: 64px; padding: 32px; border: 1px solid #3a5273; background: var(--marino);
 }
 .producto .antetitulo { margin-bottom: 4px; }
 .producto h3 { font: 500 2rem/1.15 var(--serif); }
@@ -230,7 +233,7 @@ h3 { font-size: 1.125rem; font-weight: 600; line-height: 1.3; }
 .pasos li { display: flex; gap: 12px; }
 .pasos b { font: 500 1rem/1.6 var(--mono); color: var(--celeste); }
 .pasos h3 { font-size: 1.03rem; line-height: 1.55; }
-.pasos p { font-size: .95rem; color: #bcd2f0; }
+.pasos p { font-size: .95rem; color: #c0cbdb; }
 
 /* Contacto */
 .contacto { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 88px); align-items: start; }
@@ -246,7 +249,7 @@ h3 { font-size: 1.125rem; font-weight: 600; line-height: 1.3; }
 .campo label { display: block; margin-bottom: 6px; font-size: .95rem; font-weight: 600; color: var(--marino); }
 .campo input, .campo select, .campo textarea {
   width: 100%; min-height: 48px; padding: 11px 12px;
-  background: #fff; border: 1px solid #a8b8d2; border-radius: 8px;
+  background: #fff; border: 1px solid #aab5c4; border-radius: 8px;
   font: 400 1rem/1.4 var(--sans); color: var(--tinta);
 }
 .campo textarea { resize: vertical; }
@@ -256,7 +259,9 @@ h3 { font-size: 1.125rem; font-weight: 600; line-height: 1.3; }
 
 /* Pie */
 .pie { background: var(--marino); color: #cfd9e8; padding: 26px 0 30px; font-size: .92rem; }
-.pie__fila { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px 24px; }
+.pie__fila { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px 24px; }
+.pie__marca { display: flex; align-items: center; gap: 16px; }
+.pie__marca img { width: 96px; height: auto; border-radius: 4px; }
 .pie strong { color: #fff; }
 
 /* WhatsApp flotante */
