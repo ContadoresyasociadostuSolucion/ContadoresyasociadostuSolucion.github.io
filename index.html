@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&family=Spectral:wght@500;600&display=swap">
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilos.css?v=5">
   <script>document.documentElement.classList.add('js')</script>
   <script type="application/ld+json">
   {
@@ -104,14 +104,18 @@
       </div>
     </section>
 
-    <section class="seccion atajos" aria-label="Secciones del sitio">
+    <section class="seccion atajos" aria-labelledby="atajos-titulo">
       <div class="contenedor">
+        <header class="titulo-seccion">
+          <p class="antetitulo">Cómo podemos ayudarle</p>
+          <h2 id="atajos-titulo">Encuentre lo que necesita</h2>
+        </header>
         <ul class="atajos__lista">
-          <li><a href="servicios.html"><span class="atajos__num">01</span><h2>Servicios</h2><p>Contabilidad, impuestos, NIIF, revisoría fiscal, auditoría y devolución de saldos a favor.</p></a></li>
-          <li><a href="equipo.html"><span class="atajos__num">02</span><h2>Quiénes somos</h2><p>Un consultorio de profesionales asociados en Tuluá.</p></a></li>
-          <li><a href="aplicaciones.html"><span class="atajos__num">03</span><h2>Aplicaciones</h2><p>AudiBancos, AudiEventos y desarrollos a la medida.</p></a></li>
-          <li><a href="publicaciones.html"><span class="atajos__num">04</span><h2>Publicaciones</h2><p>Nuestras piezas sobre asesoría contable y tributaria.</p></a></li>
-          <li><a href="contacto.html"><span class="atajos__num">05</span><h2>Contacto</h2><p>Escríbanos por WhatsApp o correo.</p></a></li>
+          <li><a href="servicios.html"><h3>Servicios</h3><p>Contabilidad, impuestos, NIIF, revisoría fiscal, auditoría y devolución de saldos a favor.</p><span class="atajos__flecha" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="equipo.html"><h3>Quiénes somos</h3><p>Un consultorio de profesionales asociados en Tuluá.</p><span class="atajos__flecha" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="aplicaciones.html"><h3>Aplicaciones</h3><p>AudiBancos, AudiEventos y desarrollos a la medida.</p><span class="atajos__flecha" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="publicaciones.html"><h3>Publicaciones</h3><p>Nuestras piezas sobre asesoría contable y tributaria.</p><span class="atajos__flecha" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="contacto.html"><h3>Contacto</h3><p>Escríbanos por WhatsApp o por correo.</p><span class="atajos__flecha" aria-hidden="true">&rarr;</span></a></li>
         </ul>
       </div>
     </section>
@@ -131,6 +135,6 @@
     <svg width="28" height="28" aria-hidden="true"><use href="#i-whatsapp"/></svg>
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=5"></script>
 </body>
 </html>

@@ -68,5 +68,6 @@
       }
     });
   }, { rootMargin: '0px 0px -40px 0px' });
+  document.documentElement.classList.add('revelando');
   elementos.forEach(function (el) { observador.observe(el); });
 })();
